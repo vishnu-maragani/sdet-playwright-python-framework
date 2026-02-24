@@ -24,4 +24,3 @@ def test_coreLocators(page:Page):
     page.locator("#terms").check()
     page.get_by_role("button", name="Sign In").click()
     assert page.title() !=""
-    time.sleep(5)
