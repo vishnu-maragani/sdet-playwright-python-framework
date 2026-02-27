@@ -33,14 +33,11 @@ def test_loginPage(playwright:Playwright):
     context = browser.new_context()
     page = context.new_page()
     page.goto("https://rahulshettyacademy.com/loginpagePractise/");
-    page.locator("#username").fill("rahulshettyacademy")
+    page.locator("#username").fill("rahulshettyacademys")
     page.locator("#password").fill("Learning@830$3mK2")
     page.get_by_role("combobox").select_option("teach")
     page.get_by_role("checkbox").check()
     page.locator("#signInBtn").click()
-    
-    
-    
-    
+    expect(page.get_by_text("Incorrect username/password.")).to_be_visible()
     
     
