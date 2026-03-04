@@ -1,3 +1,4 @@
+import playwright
 from playwright.sync_api import Playwright
 ordersPayload = {"orders":[{"country":"India","productOrderedId":"6960eae1c941646b7a8b3ed3"}]}
 loginPayload = {"userEmail":"vis1@gmail.com","userPassword":"VisTech@0126"}
